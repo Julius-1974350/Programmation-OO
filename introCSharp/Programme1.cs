@@ -18,6 +18,10 @@ using Chimie; // Il est impossible d'importer des définitions qui sont en confl
 // PascalCase: lettre majuscule en premier = IndentifiantDePlusieursMots
 // - tout le reste
 
+
+// Modification pour test git
+
+
 // En C#, une classe est nécessaire à tous les programmes
 class Programme1
 {
