@@ -39,8 +39,9 @@ class Programme1
         Console.ReadKey(true); // Si l'argument donné est vrai, la touche lue n'est pas affichée dans la console
         // Au lieu de system("cls");
         Console.Clear();
+        TestTableaux();
         TestNamespaces();
-        Grep();
+        //Grep();
         //TestString();
         //TestFichier();
         //partie 2
@@ -351,6 +352,39 @@ class Programme1
         // Il est possible de spéficier le namespace de la définition voulue lors de l'utilisation
         Console.WriteLine("Mercure en mythologie: " + Mythologie.Mercure.Description());
         // Si le namespace n'est pas spécifié, le compilateur recherce dans les namespaces utilisés (using)
-        Console.WriteLine("Mercure par défaut: " + Mercure.Description());
+        Console.WriteLine("Mercure par défaut: " + Astronomie.Mercure.Description());
+    }
+    static void TestTableaux()
+    {
+        // Déclaration d'un tableau d'entiers
+        // Le nombre éléments dans le tableau est déterminé lors de la déclaration et ne peux pas être modifié
+        int[] tableauEntiers = { 0, 1, 2, 3, 5, 8, 13 }; // Tableau de 7 éléments
+        // il est possible de changer la valeur des éléments 
+        tableauEntiers[0] = 1;
+        Console.WriteLine("Le tableau contient " + tableauEntiers.Length + " éléments");
+        Console.WriteLine("Le premier élément est: " + tableauEntiers[0]);
+        Console.WriteLine("Le dernier élément est: " + tableauEntiers[tableauEntiers.Length - 1]);
+        // L'instruction foreach fonctionne avec les tableaux
+        int nombre = 1;
+        foreach (int valeur in tableauEntiers)
+        {
+            Console.Write(valeur + ", ");
+            if(nombre == tableauEntiers[tableauEntiers.Length - 1])
+            {
+                Console.Write(valeur);
+            }
+            nombre++;
+        }
+        Console.WriteLine();
+
+        // Tableau de chaines de caractères
+        string[] nomsMois = { "janvier", "février", "mars", "avril" };
+        Console.WriteLine("Le 2e mois est: " + nomsMois[1]);
+        foreach (string mois in nomsMois)
+        {
+            Console.WriteLine(mois);
+        }
+        // Console.WriteLine("Le 5e mois est: " + nomMois[4]); va faire planter le programme car à l'extérieur du tableau
     }
 }
+
