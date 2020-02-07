@@ -30,8 +30,8 @@ namespace IntroOO
             r2.SetHauteur(5);
             r2.Largeur = 7;
             r2.Nom = "Rectangle 2";
-            Console.WriteLine(r2.Nom + ": Largeur = " + r2.Largeur + ", Hauteur = " + r2.Hauteur() + ", Surface = " + r2.Surface);
             r2.Afficher('▓');
+            Console.WriteLine(r2.Nom + ": Largeur = " + r2.Largeur + ", Hauteur = " + r2.Hauteur() + ", Surface = " + r2.Surface);
             Console.Write("Appuyer sur une touche pour continuer...");
             Console.ReadKey(true);
         }
