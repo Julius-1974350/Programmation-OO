@@ -66,7 +66,8 @@ namespace IntroOO
                 Console.WriteLine("h2 n'est pas égale à h3"); // résultat attendu
             }
 
-
+            HorlogeV2 h6 = new HorlogeV2();
+            h6.Afficher();
         }
 
         static void TestRectangle()
@@ -94,7 +95,23 @@ namespace IntroOO
             Rectangle rectangle3 = new Rectangle(4, 8);
             rectangle3.Afficher();
 
-            
+            Rectangle r4 = new Rectangle();
+            // Même sans ref, on pase une référence à r4
+            TestDeParametre(r4);
+            r4.Afficher();
+
+            // Déclaration d'une variable avec le mots clé "var", le compilateur va déterminer le type de la variable
+            var r5 = new Rectangle();
+            // Identique à: Rectangle r5 = new Rectangle();
+
+            // Bien qu'il soit possible de le faire, la norme de programmation préfère ne pas utiliser "var" pour les types de base
+            //var entier = 5; // int
+            //var reel = 3.14; // double
+            //var chaineDeCaractere = "test"; // string
+
+            // Sans initialisation, il est impossible d'utiliser "var" car le compilateur ne peut pas déterminer le type
+            //var x;
+            //x = new Rectangle();
         }
 
         static void AfficherRectangle(Rectangle rectangle)
@@ -107,6 +124,18 @@ namespace IntroOO
                 }
                 Console.WriteLine();
 			}
+        }
+        // Méthodes qui prend un rectangle en paramètre
+        static void TestDeParametre(Rectangle rectangle)
+        {
+            // Une variable de type classe sera toujours considérée comme une référence lorsque passé en paramètre à une méthode
+            rectangle.SetHauteur(3);
+            rectangle.Largeur = 5;
+            // Pour les types de classes, une variable n'est créée que lorsque l'instruction "new" est appelée
+            // autreRectangle est une référence sur réctangle, car une nouvelle variable n'a pas été créée avec "new"
+            Rectangle autreRectangle = rectangle;
+            autreRectangle.SetHauteur(10);
+            autreRectangle.Largeur = 22;
         }
     }
 }

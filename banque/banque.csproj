@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63594E4B-158C-42A0-BCB1-DD7EDA6D7F26}</ProjectGuid>
+    <ProjectGuid>{F90EC4CE-8717-4509-9976-AF2685C0A3D5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>IntroOO</RootNamespace>
-    <AssemblyName>IntroOO</AssemblyName>
+    <RootNamespace>banque</RootNamespace>
+    <AssemblyName>banque</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Horloge.cs" />
-    <Compile Include="HorlogeV2.cs" />
-    <Compile Include="ProgOO.cs" />
+    <Compile Include="Banque.cs" />
+    <Compile Include="CompteBancaire.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rectangle.cs" />
+    <Compile Include="SimulateurBanque.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -14,19 +14,25 @@ namespace IntroOO
     {
         public Horloge(int heures)
         {
+            Console.WriteLine("Constructeur de l'horloge avec des heures");
             if (heures >= 0 && 23 <= 23)
             {
              _secondes = heures * 3600;
             }
             
         }
-        public Horloge(int heures, int minutes)
+        // Les 2 points : à la fin du constructeur permettent de spécifier un autre constructeur (de la même classe)
+        // pour réutiliser du code existant qu'on ne veut pas copié
+        // L'appel du constructeur ne se fait pas avec le nom de la classe, mais avec le mot clé "this"
+        public Horloge(int heures, int minutes) : 
+         this(heures) // appel du constructeur de l'objet courant, avec un seul paramètre
         {
-            if (heures >= 0 && heures <= 59)
-            {
-                _secondes = heures * 3600;
-            }
-
+            /*          if (heures >= 0 && heures <= 59)
+                        {
+                            _secondes = heures * 3600;
+                        }
+            */
+            Console.WriteLine("Constructeur de l'horloge avec des heures et des minutes");
             if (minutes >= 0 && minutes <= 59)
             {
                 _secondes += minutes * 60;
@@ -38,8 +44,11 @@ namespace IntroOO
             /// <param name="heures">Les heures de l'horloge</param>
             /// <param name="minutes">Les minutes de l'horloge</param>
             /// <param name="secondes">Les minutes de l'horloge</param>
-            public Horloge(int heures, int minutes, int secondes)
+        public Horloge(int heures, int minutes, int secondes) :
+            this(heures, minutes) // Appel du constructeur avec 2 paramètres
         {
+            Console.WriteLine("Constructeur de l'horloge avec des heures et des minutes et des secondes");
+/*
             if (heures >= 0 && heures <=59)
             {
                 _secondes = heures * 3600;
@@ -49,7 +58,7 @@ namespace IntroOO
             {
                 _secondes += minutes * 60;
             }
-
+*/
             if (secondes >= 0 && secondes <= 59)
             {
                 _secondes += secondes;
@@ -79,13 +88,13 @@ namespace IntroOO
 
         public void Afficher()
         {
-            Console.WriteLine("{0:D2}:{1:D2},{2:D2}", heures, minutes, secondes);
+            Console.WriteLine("{0:D2}:{1:D2}:{2:D2}", heures, minutes, secondes);
         }
 
         /// <summary>
         /// Affiche la valeur de l'horloge dans le format HH:MM::SS
         /// </summary>
-
+        /// Permet de savoir si les deux horloges sont égales, false sinon
         public bool EstEgaleA(Horloge autreHorloge)
         {
             //Le niveau de protection (private) est au niveau de la classe, et non pas de l'objet
@@ -93,6 +102,15 @@ namespace IntroOO
 
             //Compare les secondes de l'objet courant avec les secondes de l'autre objet
             return _secondes == autreHorloge._secondes;
+
+            // Cette ligne est équivalent à la précédente
+            // "this" est un mot clé désignant une variables qui représente l'objet courrant
+            // Si la méthode est appellée par: h2.EstEagleA(...), "this" représente h2
+            //return this._secondes == autreHorloge._secondes;
+
+            // autreHorloge est une référence
+            // Il faut être prudent de ne pas faire de modifications
+            // autreHorologe._secondes = 123;
         }
 
 

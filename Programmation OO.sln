@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "introCSharp", "introCSharp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroOO", "IntroOO\IntroOO.csproj", "{63594E4B-158C-42A0-BCB1-DD7EDA6D7F26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "banque", "banque\banque.csproj", "{F90EC4CE-8717-4509-9976-AF2685C0A3D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{63594E4B-158C-42A0-BCB1-DD7EDA6D7F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63594E4B-158C-42A0-BCB1-DD7EDA6D7F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63594E4B-158C-42A0-BCB1-DD7EDA6D7F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F90EC4CE-8717-4509-9976-AF2685C0A3D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F90EC4CE-8717-4509-9976-AF2685C0A3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F90EC4CE-8717-4509-9976-AF2685C0A3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F90EC4CE-8717-4509-9976-AF2685C0A3D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,7 +20,7 @@ namespace IntroOO
         // Un constructeur est une méthode spéciale qui est appellée automatiquement lors de la création d'un objet
         // Un constructeur n'a pas de type de retour 
         // Un constructeur porte exactement le même nom que la classe
-        public Rectangle(int hauteur, int largeur)
+        public Rectangle(int hauteur = 1, int largeur = 1)
         {
             //_hauteur = hauteur;
             //_largeur = largeur;
