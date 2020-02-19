@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroOO", "IntroOO\IntroOO.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "banque", "banque\banque.csproj", "{F90EC4CE-8717-4509-9976-AF2685C0A3D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heritage", "Heritage\Heritage.csproj", "{36DAAFA0-C914-4EE2-83DD-3A402220E441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{EC6C7882-DFEA-4A01-8F6F-4E26C778B01F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{F90EC4CE-8717-4509-9976-AF2685C0A3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F90EC4CE-8717-4509-9976-AF2685C0A3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F90EC4CE-8717-4509-9976-AF2685C0A3D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36DAAFA0-C914-4EE2-83DD-3A402220E441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36DAAFA0-C914-4EE2-83DD-3A402220E441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36DAAFA0-C914-4EE2-83DD-3A402220E441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36DAAFA0-C914-4EE2-83DD-3A402220E441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6C7882-DFEA-4A01-8F6F-4E26C778B01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6C7882-DFEA-4A01-8F6F-4E26C778B01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6C7882-DFEA-4A01-8F6F-4E26C778B01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6C7882-DFEA-4A01-8F6F-4E26C778B01F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
