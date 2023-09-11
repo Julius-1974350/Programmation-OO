@@ -1,3 +1,2 @@
 # Programmation-OO
-Modification pour test de git 
-Modification de la maison
+Learning how Object-oriented programming works in C#
